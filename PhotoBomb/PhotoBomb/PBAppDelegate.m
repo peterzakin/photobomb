@@ -7,6 +7,7 @@
 //
 
 #import "PBAppDelegate.h"
+#import "HomeViewController.h"
 
 @implementation PBAppDelegate
 
@@ -20,6 +21,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    HomeViewController *homeViewController = [[HomeViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    self.window.rootViewController = nc;
+
     return YES;
 }
 
