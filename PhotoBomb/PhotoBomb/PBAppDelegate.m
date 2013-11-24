@@ -7,6 +7,7 @@
 //
 
 #import "PBAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation PBAppDelegate
 
@@ -20,6 +21,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [Parse setApplicationId:@"Z3wnDUOjiJ9Sm8dc0bIpQhNlDIsOXQY4lhkpOapQ"
+                  clientKey:@"ttcmtxfV5XGS5br989oWCK7jV6epCJzTaR8LPz3l"];
+    // Basic tracking of app opens
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
