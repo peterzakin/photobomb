@@ -32,6 +32,12 @@
 		C930AD1D18426E6300B097AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1C18426E6300B097AC /* Security.framework */; };
 		C930AD1F18426E6B00B097AC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1E18426E6B00B097AC /* StoreKit.framework */; };
 		C930AD2118426E7500B097AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD2018426E7500B097AC /* SystemConfiguration.framework */; };
+
+		1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFABD7A18417E5000D7BB03 /* HomeViewController.m */; };
+		1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */; };
+		1BFABD8B1842791E00D7BB03 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFABD891842791D00D7BB03 /* CameraViewController.m */; };
+		1BFABD8C1842791E00D7BB03 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,7 @@
 		1B164A1C183C358A0042511E /* PhotoBombTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoBombTests-Info.plist"; sourceTree = "<group>"; };
 		1B164A1E183C358A0042511E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B164A20183C358A0042511E /* PhotoBombTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBombTests.m; sourceTree = "<group>"; };
+
 		C930AD0E18426DF200B097AC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C930AD1018426E2700B097AC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C930AD1218426E2F00B097AC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -73,6 +80,14 @@
 		C930AD1C18426E6300B097AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C930AD1E18426E6B00B097AC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C930AD2018426E7500B097AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+
+		1BFABD7918417E5000D7BB03 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1BFABD7A18417E5000D7BB03 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1BFABD881842791D00D7BB03 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		1BFABD891842791D00D7BB03 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +129,12 @@
 		1B1649E9183C35890042511E = {
 			isa = PBXGroup;
 			children = (
+				1BFABD881842791D00D7BB03 /* CameraViewController.h */,
+				1BFABD891842791D00D7BB03 /* CameraViewController.m */,
+				1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */,
+				1BFABD7918417E5000D7BB03 /* HomeViewController.h */,
+				1BFABD7A18417E5000D7BB03 /* HomeViewController.m */,
+				1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */,
 				1B1649FD183C35890042511E /* PhotoBomb */,
 				1B164A1A183C358A0042511E /* PhotoBombTests */,
 				1B1649F4183C35890042511E /* Frameworks */,
@@ -270,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B164A02183C35890042511E /* InfoPlist.strings in Resources */,
+				1BFABD8C1842791E00D7BB03 /* CameraViewController.xib in Resources */,
 				1B164A0D183C358A0042511E /* Images.xcassets in Resources */,
+				1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,9 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFABD8B1842791E00D7BB03 /* CameraViewController.m in Sources */,
 				1B164A0B183C358A0042511E /* PhotoBomb.xcdatamodeld in Sources */,
 				1B164A08183C358A0042511E /* PBAppDelegate.m in Sources */,
 				1B164A04183C35890042511E /* main.m in Sources */,
+				1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
