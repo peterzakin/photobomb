@@ -23,6 +23,7 @@
 		1B164A1F183C358A0042511E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B164A1D183C358A0042511E /* InfoPlist.strings */; };
 		1B164A21183C358A0042511E /* PhotoBombTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B164A20183C358A0042511E /* PhotoBombTests.m */; };
 		1B28BC9D1842A72F00E5B756 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B28BC9C1842A72F00E5B756 /* Parse.framework */; };
+		1BE702CB1842AC20004CD1B5 /* peter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BE702CA1842AC20004CD1B5 /* peter.jpg */; };
 		1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFABD7A18417E5000D7BB03 /* HomeViewController.m */; };
 		1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */; };
 		1BFABD8B1842791E00D7BB03 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFABD891842791D00D7BB03 /* CameraViewController.m */; };
@@ -68,6 +69,7 @@
 		1B164A1E183C358A0042511E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B164A20183C358A0042511E /* PhotoBombTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBombTests.m; sourceTree = "<group>"; };
 		1B28BC9C1842A72F00E5B756 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		1BE702CA1842AC20004CD1B5 /* peter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peter.jpg; sourceTree = "<group>"; };
 		1BFABD7918417E5000D7BB03 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		1BFABD7A18417E5000D7BB03 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				1B164A1A183C358A0042511E /* PhotoBombTests */,
 				1B1649F4183C35890042511E /* Frameworks */,
 				1B1649F3183C35890042511E /* Products */,
+				1BE702CA1842AC20004CD1B5 /* peter.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B164A02183C35890042511E /* InfoPlist.strings in Resources */,
+				1BE702CB1842AC20004CD1B5 /* peter.jpg in Resources */,
 				1BFABD8C1842791E00D7BB03 /* CameraViewController.xib in Resources */,
 				1B164A0D183C358A0042511E /* Images.xcassets in Resources */,
 				1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */,

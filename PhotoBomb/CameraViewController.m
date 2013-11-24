@@ -28,9 +28,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-    [picker setDelegate:self];
-    [self presentViewController:picker animated:YES completion:nil];
+    if([UIImagePickerController isSourceTypeAvailable:
+        UIImagePickerControllerSourceTypeCamera] == YES){
+        [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        [picker setDelegate:self];
+        [self presentViewController:picker animated:YES completion:nil];
+    } else {
+        UIImage *image = [UIImage imageNamed:@"peter.jpg"];
+        [self.imageView setImage:image];
+    
+    }
+  
 
 }
 
