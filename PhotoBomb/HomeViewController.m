@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "CameraViewController.h"
+#import <Parse/Parse.h>
 
 @interface HomeViewController ()
 
@@ -39,6 +40,24 @@
 
 - (void) loginUser
 {
+    // Login
+    PFUser *currentUser = [PFUser currentUser];
+    if (!currentUser) {
+        // Dummy username and password
+        PFUser *user = [PFUser user];
+        user.username = @"test";
+        user.password = @"password";
+        
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (error) {
+                // Assume the error is because the user already existed.
+                [PFUser logInWithUsername:@"test" password:@"password"];
+            }
+        }];
+    }
+
+    
+    
     CameraViewController *cvc = [[CameraViewController alloc] init];
   
     [[self navigationController] pushViewController:cvc animated:YES];

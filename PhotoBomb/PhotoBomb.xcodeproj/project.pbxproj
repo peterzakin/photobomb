@@ -36,6 +36,8 @@
 		C930AD1D18426E6300B097AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1C18426E6300B097AC /* Security.framework */; };
 		C930AD1F18426E6B00B097AC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1E18426E6B00B097AC /* StoreKit.framework */; };
 		C930AD2118426E7500B097AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD2018426E7500B097AC /* SystemConfiguration.framework */; };
+		C9FFF5131842B4B80053475A /* ParseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FFF5121842B4B80053475A /* ParseStore.m */; };
+		C9FFF5171842B8C90053475A /* PBImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FFF5161842B8C90053475A /* PBImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		C930AD1C18426E6300B097AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C930AD1E18426E6B00B097AC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C930AD2018426E7500B097AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9FFF5111842B4B80053475A /* ParseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseStore.h; sourceTree = "<group>"; };
+		C9FFF5121842B4B80053475A /* ParseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseStore.m; sourceTree = "<group>"; };
+		C9FFF5151842B8C90053475A /* PBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PBImage.h; path = Models/PBImage.h; sourceTree = "<group>"; };
+		C9FFF5161842B8C90053475A /* PBImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PBImage.m; path = Models/PBImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +130,9 @@
 		1B1649E9183C35890042511E = {
 			isa = PBXGroup;
 			children = (
-				1BFABD881842791D00D7BB03 /* CameraViewController.h */,
-				1BFABD891842791D00D7BB03 /* CameraViewController.m */,
-				1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */,
-				1BFABD7918417E5000D7BB03 /* HomeViewController.h */,
-				1BFABD7A18417E5000D7BB03 /* HomeViewController.m */,
-				1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */,
+				C9FFF5141842B8820053475A /* Models */,
+				C9FFF50C1842B3AF0053475A /* Views */,
+				C9FFF50D1842B3BE0053475A /* Controllers */,
 				1B1649FD183C35890042511E /* PhotoBomb */,
 				1B164A1A183C358A0042511E /* PhotoBombTests */,
 				1B1649F4183C35890042511E /* Frameworks */,
@@ -207,6 +210,61 @@
 				1B164A1D183C358A0042511E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9FFF50C1842B3AF0053475A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */,
+				1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C9FFF50D1842B3BE0053475A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9FFF5101842B3EF0053475A /* ParseStore */,
+				C9FFF50F1842B3DF0053475A /* HomeViewController */,
+				C9FFF50E1842B3D20053475A /* CameraViewController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C9FFF50E1842B3D20053475A /* CameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1BFABD881842791D00D7BB03 /* CameraViewController.h */,
+				1BFABD891842791D00D7BB03 /* CameraViewController.m */,
+			);
+			name = CameraViewController;
+			sourceTree = "<group>";
+		};
+		C9FFF50F1842B3DF0053475A /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1BFABD7918417E5000D7BB03 /* HomeViewController.h */,
+				1BFABD7A18417E5000D7BB03 /* HomeViewController.m */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		C9FFF5101842B3EF0053475A /* ParseStore */ = {
+			isa = PBXGroup;
+			children = (
+				C9FFF5111842B4B80053475A /* ParseStore.h */,
+				C9FFF5121842B4B80053475A /* ParseStore.m */,
+			);
+			name = ParseStore;
+			sourceTree = "<group>";
+		};
+		C9FFF5141842B8820053475A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9FFF5151842B8C90053475A /* PBImage.h */,
+				C9FFF5161842B8C90053475A /* PBImage.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +365,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FFF5131842B4B80053475A /* ParseStore.m in Sources */,
 				1BFABD8B1842791E00D7BB03 /* CameraViewController.m in Sources */,
+				C9FFF5171842B8C90053475A /* PBImage.m in Sources */,
 				1B164A0B183C358A0042511E /* PhotoBomb.xcdatamodeld in Sources */,
 				1B164A08183C358A0042511E /* PBAppDelegate.m in Sources */,
 				1B164A04183C35890042511E /* main.m in Sources */,
