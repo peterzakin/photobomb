@@ -22,8 +22,17 @@
 		1B164A17183C358A0042511E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1649FB183C35890042511E /* CoreData.framework */; };
 		1B164A1F183C358A0042511E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B164A1D183C358A0042511E /* InfoPlist.strings */; };
 		1B164A21183C358A0042511E /* PhotoBombTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B164A20183C358A0042511E /* PhotoBombTests.m */; };
-		1B28BC9D1842A72F00E5B756 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B28BC9C1842A72F00E5B756 /* Parse.framework */; };
+		1B4585611842AFD800BBE4C9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585601842AFD800BBE4C9 /* CoreText.framework */; };
+		1B4585631842AFE000BBE4C9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585621842AFE000BBE4C9 /* OpenGLES.framework */; };
+		1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1618426E4B00B097AC /* libz.1.1.3.dylib */; };
+		1B9E6AEC1842BA9800BB29C8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AEB1842BA9800BB29C8 /* Parse.framework */; };
+		1B9E6AEE1842BB3300BB29C8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AED1842BB3300BB29C8 /* FacebookSDK.framework */; };
+		1B9E6AFC1842BDA300BB29C8 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AF91842BDA300BB29C8 /* libAviarySDK.a */; };
+		1B9E6AFD1842BDA300BB29C8 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B9E6AFB1842BDA300BB29C8 /* AviarySDKResources.bundle */; };
 		1BE702CB1842AC20004CD1B5 /* peter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BE702CA1842AC20004CD1B5 /* peter.jpg */; };
+		1BE702DC1842AF73004CD1B5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */; };
+		1BE702DE1842AF7D004CD1B5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */; };
+		1BE702E01842AF86004CD1B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DF1842AF86004CD1B5 /* Accelerate.framework */; };
 		1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFABD7A18417E5000D7BB03 /* HomeViewController.m */; };
 		1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */; };
 		1BFABD8B1842791E00D7BB03 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFABD891842791D00D7BB03 /* CameraViewController.m */; };
@@ -31,7 +40,6 @@
 		C930AD1118426E2700B097AC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1018426E2700B097AC /* AudioToolbox.framework */; };
 		C930AD1318426E2F00B097AC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1218426E2F00B097AC /* CFNetwork.framework */; };
 		C930AD1518426E3F00B097AC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1418426E3F00B097AC /* CoreLocation.framework */; };
-		C930AD1718426E4B00B097AC /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1618426E4B00B097AC /* libz.1.1.3.dylib */; };
 		C930AD1918426E5600B097AC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1818426E5600B097AC /* MobileCoreServices.framework */; };
 		C930AD1B18426E5D00B097AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1A18426E5D00B097AC /* QuartzCore.framework */; };
 		C930AD1D18426E6300B097AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1C18426E6300B097AC /* Security.framework */; };
@@ -68,8 +76,24 @@
 		1B164A1C183C358A0042511E /* PhotoBombTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoBombTests-Info.plist"; sourceTree = "<group>"; };
 		1B164A1E183C358A0042511E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B164A20183C358A0042511E /* PhotoBombTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBombTests.m; sourceTree = "<group>"; };
-		1B28BC9C1842A72F00E5B756 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		1B4585601842AFD800BBE4C9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1B4585621842AFE000BBE4C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1B9E6AEB1842BA9800BB29C8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../../Volumes/NO NAME/Parse.framework"; sourceTree = "<group>"; };
+		1B9E6AED1842BB3300BB29C8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		1B9E6AF11842BDA300BB29C8 /* AFOpenGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOpenGLManager.h; sourceTree = "<group>"; };
+		1B9E6AF21842BDA300BB29C8 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
+		1B9E6AF31842BDA300BB29C8 /* AFPhotoEditorController+InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFPhotoEditorController+InAppPurchase.h"; sourceTree = "<group>"; };
+		1B9E6AF41842BDA300BB29C8 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
+		1B9E6AF51842BDA300BB29C8 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
+		1B9E6AF61842BDA300BB29C8 /* AFPhotoEditorCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorCustomization.h; sourceTree = "<group>"; };
+		1B9E6AF71842BDA300BB29C8 /* AFPhotoEditorProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorProduct.h; sourceTree = "<group>"; };
+		1B9E6AF81842BDA300BB29C8 /* AFPhotoEditorSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorSession.h; sourceTree = "<group>"; };
+		1B9E6AF91842BDA300BB29C8 /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAviarySDK.a; sourceTree = "<group>"; };
+		1B9E6AFB1842BDA300BB29C8 /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
 		1BE702CA1842AC20004CD1B5 /* peter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peter.jpg; sourceTree = "<group>"; };
+		1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		1BE702DF1842AF86004CD1B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1BFABD7918417E5000D7BB03 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		1BFABD7A18417E5000D7BB03 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -92,20 +116,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */,
+				1B4585631842AFE000BBE4C9 /* OpenGLES.framework in Frameworks */,
+				1B4585611842AFD800BBE4C9 /* CoreText.framework in Frameworks */,
+				1B9E6AFC1842BDA300BB29C8 /* libAviarySDK.a in Frameworks */,
+				1B1649F6183C35890042511E /* Foundation.framework in Frameworks */,
+				1B1649F8183C35890042511E /* CoreGraphics.framework in Frameworks */,
+				1BE702E01842AF86004CD1B5 /* Accelerate.framework in Frameworks */,
+				1BE702DE1842AF7D004CD1B5 /* libz.1.2.5.dylib in Frameworks */,
+				1BE702DC1842AF73004CD1B5 /* libsqlite3.0.dylib in Frameworks */,
 				C930AD2118426E7500B097AC /* SystemConfiguration.framework in Frameworks */,
 				C930AD1F18426E6B00B097AC /* StoreKit.framework in Frameworks */,
 				C930AD1D18426E6300B097AC /* Security.framework in Frameworks */,
 				C930AD1B18426E5D00B097AC /* QuartzCore.framework in Frameworks */,
 				C930AD1918426E5600B097AC /* MobileCoreServices.framework in Frameworks */,
-				C930AD1718426E4B00B097AC /* libz.1.1.3.dylib in Frameworks */,
+				1B9E6AEE1842BB3300BB29C8 /* FacebookSDK.framework in Frameworks */,
 				C930AD1518426E3F00B097AC /* CoreLocation.framework in Frameworks */,
-				1B1649F8183C35890042511E /* CoreGraphics.framework in Frameworks */,
+				1B9E6AEC1842BA9800BB29C8 /* Parse.framework in Frameworks */,
 				C930AD1318426E2F00B097AC /* CFNetwork.framework in Frameworks */,
 				C930AD1118426E2700B097AC /* AudioToolbox.framework in Frameworks */,
-				1B28BC9D1842A72F00E5B756 /* Parse.framework in Frameworks */,
 				1B1649FC183C35890042511E /* CoreData.framework in Frameworks */,
 				1B1649FA183C35890042511E /* UIKit.framework in Frameworks */,
-				1B1649F6183C35890042511E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +168,7 @@
 				1B1649F4183C35890042511E /* Frameworks */,
 				1B1649F3183C35890042511E /* Products */,
 				1BE702CA1842AC20004CD1B5 /* peter.jpg */,
+				1B9E6AEF1842BDA300BB29C8 /* AviarySDK */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,12 +184,18 @@
 		1B1649F4183C35890042511E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B28BC9C1842A72F00E5B756 /* Parse.framework */,
+				1B9E6AED1842BB3300BB29C8 /* FacebookSDK.framework */,
+				1B4585621842AFE000BBE4C9 /* OpenGLES.framework */,
+				1B4585601842AFD800BBE4C9 /* CoreText.framework */,
+				1BE702DF1842AF86004CD1B5 /* Accelerate.framework */,
+				1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */,
+				1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */,
 				C930AD2018426E7500B097AC /* SystemConfiguration.framework */,
 				C930AD1E18426E6B00B097AC /* StoreKit.framework */,
 				C930AD1C18426E6300B097AC /* Security.framework */,
 				C930AD1A18426E5D00B097AC /* QuartzCore.framework */,
 				C930AD1818426E5600B097AC /* MobileCoreServices.framework */,
+				1B9E6AEB1842BA9800BB29C8 /* Parse.framework */,
 				C930AD1618426E4B00B097AC /* libz.1.1.3.dylib */,
 				C930AD1418426E3F00B097AC /* CoreLocation.framework */,
 				C930AD1218426E2F00B097AC /* CFNetwork.framework */,
@@ -210,6 +248,39 @@
 				1B164A1D183C358A0042511E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B9E6AEF1842BDA300BB29C8 /* AviarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E6AF01842BDA300BB29C8 /* Headers */,
+				1B9E6AF91842BDA300BB29C8 /* libAviarySDK.a */,
+				1B9E6AFA1842BDA300BB29C8 /* Resources */,
+			);
+			path = AviarySDK;
+			sourceTree = "<group>";
+		};
+		1B9E6AF01842BDA300BB29C8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E6AF11842BDA300BB29C8 /* AFOpenGLManager.h */,
+				1B9E6AF21842BDA300BB29C8 /* AFPhotoEditorContext.h */,
+				1B9E6AF31842BDA300BB29C8 /* AFPhotoEditorController+InAppPurchase.h */,
+				1B9E6AF41842BDA300BB29C8 /* AFPhotoEditorController.h */,
+				1B9E6AF51842BDA300BB29C8 /* AFPhotoEditorControllerOptions.h */,
+				1B9E6AF61842BDA300BB29C8 /* AFPhotoEditorCustomization.h */,
+				1B9E6AF71842BDA300BB29C8 /* AFPhotoEditorProduct.h */,
+				1B9E6AF81842BDA300BB29C8 /* AFPhotoEditorSession.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		1B9E6AFA1842BDA300BB29C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B9E6AFB1842BDA300BB29C8 /* AviarySDKResources.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +361,7 @@
 			files = (
 				1B164A02183C35890042511E /* InfoPlist.strings in Resources */,
 				1BE702CB1842AC20004CD1B5 /* peter.jpg in Resources */,
+				1B9E6AFD1842BDA300BB29C8 /* AviarySDKResources.bundle in Resources */,
 				1BFABD8C1842791E00D7BB03 /* CameraViewController.xib in Resources */,
 				1B164A0D183C358A0042511E /* Images.xcassets in Resources */,
 				1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */,
@@ -437,10 +509,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"./**",
 					"$(inherited)",
+					"/Volumes/NO\\ NAME",
+					/Users/peterzakin/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomb/PhotoBomb-Prefix.pch";
 				INFOPLIST_FILE = "PhotoBomb/PhotoBomb-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/peterzakin/Desktop/photobomb/PhotoBomb/AviarySDK,
+				);
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -454,10 +533,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"./**",
 					"$(inherited)",
+					"/Volumes/NO\\ NAME",
+					/Users/peterzakin/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomb/PhotoBomb-Prefix.pch";
 				INFOPLIST_FILE = "PhotoBomb/PhotoBomb-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/peterzakin/Desktop/photobomb/PhotoBomb/AviarySDK,
+				);
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

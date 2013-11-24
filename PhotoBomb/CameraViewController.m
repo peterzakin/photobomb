@@ -36,7 +36,7 @@
     } else {
         UIImage *image = [UIImage imageNamed:@"peter.jpg"];
         [self.imageView setImage:image];
-    
+        [self displayEditorForImage:image];
     }
   
 
@@ -55,6 +55,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Aviary stuff
+- (void)displayEditorForImage:(UIImage *)imageToEdit
+{
+    AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit];
+    [editorController setDelegate:self];
+    [self presentViewController:editorController animated:YES completion:nil];
 }
 
 @end
