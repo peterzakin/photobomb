@@ -47,7 +47,6 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     [self.imageView setImage:image];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
