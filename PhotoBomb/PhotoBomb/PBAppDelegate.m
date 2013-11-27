@@ -7,10 +7,10 @@
 //
 
 #import "PBAppDelegate.h"
-
 #import <Parse/Parse.h>
-
 #import "HomeViewController.h"
+#import "PBImage.h"
+
 @implementation PBAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -23,11 +23,15 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // Init Parse
+    [PBImage registerSubclass];
     [Parse setApplicationId:@"Z3wnDUOjiJ9Sm8dc0bIpQhNlDIsOXQY4lhkpOapQ"
                   clientKey:@"ttcmtxfV5XGS5br989oWCK7jV6epCJzTaR8LPz3l"];
     // Basic tracking of app opens
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-
+    
+       
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     self.window.rootViewController = nc;
