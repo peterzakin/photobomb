@@ -35,7 +35,7 @@
         [self presentViewController:picker animated:YES completion:nil];
     } else {
         UIImage *image = [UIImage imageNamed:@"peter.jpg"];
-        [self.imageView setImage:image];
+//        [self.imageView setImage:image];
         [self displayEditorForImage:image];
     }
   
@@ -62,6 +62,22 @@
     AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit];
     [editorController setDelegate:self];
     [self presentViewController:editorController animated:YES completion:nil];
+}
+
+- (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
+{
+    [editor dismissViewControllerAnimated:YES completion:^(void){
+        NSLog(@"entered completion block");
+    }];
+   [self.imageView setImage:image];
+}
+
+- (void)photoEditorCanceled:(AFPhotoEditorController *)editor
+{
+    // Handle cancelation here
+    NSLog(@"PHOTO EDITOR CANCELLED");
+    [editor dismissViewControllerAnimated:YES completion:nil];
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 @end
