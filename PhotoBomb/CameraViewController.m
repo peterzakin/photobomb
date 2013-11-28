@@ -35,7 +35,6 @@
         [self presentViewController:picker animated:YES completion:nil];
     } else {
         UIImage *image = [UIImage imageNamed:@"peter.jpg"];
-//        [self.imageView setImage:image];
         [self displayEditorForImage:image];
     }
   
@@ -66,9 +65,7 @@
 
 - (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
 {
-    [editor dismissViewControllerAnimated:YES completion:^(void){
-        NSLog(@"entered completion block");
-    }];
+    [editor dismissViewControllerAnimated:YES completion:nil];
    [self.imageView setImage:image];
 }
 
