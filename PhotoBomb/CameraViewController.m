@@ -44,9 +44,10 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    [self.imageView setImage:image];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        [self displayEditorForImage:image];
+
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,13 +68,29 @@
 {
     [editor dismissViewControllerAnimated:YES completion:nil];
    [self.imageView setImage:image];
+    [self.shareButton addTarget:self action:@selector(shareButtonPressed) forControlEvents:UIControlEventTouchDown];
+    
+    self.imageView.layer.zPosition = 0;
+    self.shareButton.layer.zPosition = 10;
+    
+    [self.shareButton setFrame:CGRectMake(0, self.view.bounds.size.height - self.shareButton.bounds.size.height, self.shareButton.bounds.size.width, self.shareButton.bounds.size.width)];
+
 }
+
+- (void)shareButtonPressed
+{
+    NSLog(@"in sharebuttnpressed");
+    
+}
+                                                    
 
 - (void)photoEditorCanceled:(AFPhotoEditorController *)editor
 {
     // Handle cancelation here
     NSLog(@"PHOTO EDITOR CANCELLED");
     [editor dismissViewControllerAnimated:YES completion:nil];
+    
+    //goes back to first screen
     [[self navigationController] popViewControllerAnimated:YES];
 }
 

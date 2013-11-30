@@ -11,5 +11,6 @@
 
 @interface CameraViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
