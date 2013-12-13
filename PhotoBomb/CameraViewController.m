@@ -32,7 +32,7 @@
         UIImagePickerControllerSourceTypeCamera] == YES){
         [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
         [picker setDelegate:self];
-        [self presentViewController:picker animated:YES completion:nil];
+        [self presentViewController:picker animated:NO completion:nil];
     } else {
         UIImage *image = [UIImage imageNamed:@"peter.jpg"];
         [self displayEditorForImage:image];
@@ -44,10 +44,20 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    [self dismissViewControllerAnimated:YES completion:^(void){
+    [picker dismissViewControllerAnimated:YES completion:^(void){
         [self displayEditorForImage:image];
 
+        
     }];
+
+}
+
+
+- (void)shareButtonPressed
+{
+    NSLog(@"in sharebuttnpressed");
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,12 +87,6 @@
 
 }
 
-- (void)shareButtonPressed
-{
-    NSLog(@"in sharebuttnpressed");
-    
-}
-                                                    
 
 - (void)photoEditorCanceled:(AFPhotoEditorController *)editor
 {
