@@ -29,9 +29,10 @@
 {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
-    [self.view setBackgroundColor:[UIColor blackColor]];
-    
-    [self.loginButton setTitle:@"login" forState:UIControlStateNormal];
+    //[self.view setBackgroundColor:[UIColor blackColor]];
+
+    // FB login button
+    //[self.loginButton setTitle:@"Login With Facebook" forState:UIControlStateNormal];
     [self.loginButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchDown];
     
     // Do any additional setup after loading the view from its nib.
@@ -55,9 +56,6 @@
             }
         }];
     }
-
-    
-    
     CameraViewController *cvc = [[CameraViewController alloc] init];
   
     [[self navigationController] pushViewController:cvc animated:YES];
