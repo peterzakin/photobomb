@@ -37,7 +37,16 @@
         UIImage *image = [UIImage imageNamed:@"peter.jpg"];
         [self displayEditorForImage:image];
     }
-  
+    
+    FBRequest *request = [FBRequest requestForMe];
+    
+    
+    // Send request to Facebook
+
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        // handle response
+        NSLog(@"%@", result);
+    }];
 
 }
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AFPhotoEditorController.h"
+#import <Parse/Parse.h>
 
 @interface CameraViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
