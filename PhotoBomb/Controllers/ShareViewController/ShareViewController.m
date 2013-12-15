@@ -7,8 +7,12 @@
 //
 
 #import "ShareViewController.h"
+<<<<<<< HEAD
 #import "CameraViewController.h"
 
+=======
+#import <FacebookSDK/FacebookSDK.h>
+>>>>>>> 58d251fbef66038058f3e8642aedfd6f03476d71
 @interface ShareViewController ()
 
 @end
@@ -44,7 +48,16 @@
 
 - (void)shareButtonPressed
 {
-    NSLog(@"shared");
+    // Share to FB
+    FBRequestConnection *connection = [[FBRequestConnection alloc] init];
+    [connection addRequest:[FBRequest requestForUploadPhoto:self.image]
+         completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+             NSLog(@"%@", error);
+         }
+     ];
+    [connection start];
+    
+    // Return user to beginning of app, i.e. take another picture
     [[self navigationController] popViewControllerAnimated:YES];
     CameraViewController *cvc = [[CameraViewController alloc] init];
     [[self navigationController] pushViewController:cvc animated:YES];
