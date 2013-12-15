@@ -87,7 +87,7 @@
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
             CameraViewController *cvc = [[CameraViewController alloc] init];
-            
+
             [[self navigationController] pushViewController:cvc animated:YES];
         } else {
             NSLog(@"User with facebook logged in!");

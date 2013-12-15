@@ -7,6 +7,7 @@
 //
 
 #import "ShareViewController.h"
+#import "CameraViewController.h"
 
 @interface ShareViewController ()
 
@@ -43,7 +44,10 @@
 
 - (void)shareButtonPressed
 {
-    NSLog(@"in sharebuttnpressed");
+    NSLog(@"shared");
+    [[self navigationController] popViewControllerAnimated:YES];
+    CameraViewController *cvc = [[CameraViewController alloc] init];
+    [[self navigationController] pushViewController:cvc animated:YES];
 }
 
 
