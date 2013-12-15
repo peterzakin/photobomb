@@ -7,6 +7,7 @@
 //
 
 #import "CameraViewController.h"
+#import "ShareViewController.h"
 
 @interface CameraViewController ()
 
@@ -37,8 +38,6 @@
         UIImage *image = [UIImage imageNamed:@"peter.jpg"];
         [self displayEditorForImage:image];
     }
-  
-
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -46,19 +45,10 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:^(void){
         [self displayEditorForImage:image];
-
-        
     }];
 
 }
 
-
-- (void)shareButtonPressed
-{
-    NSLog(@"in sharebuttnpressed");
-    
-    
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -74,17 +64,15 @@
     [self presentViewController:editorController animated:YES completion:nil];
 }
 
+/* Aviary delegate method that is called when Aviary is done with an image. 
+ This method then immediately moves logic to ShareViewController */
 - (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
 {
     [editor dismissViewControllerAnimated:YES completion:nil];
-   [self.imageView setImage:image];
-    [self.shareButton addTarget:self action:@selector(shareButtonPressed) forControlEvents:UIControlEventTouchDown];
     
-    self.imageView.layer.zPosition = 0;
-    self.shareButton.layer.zPosition = 10;
-    
-    [self.shareButton setFrame:CGRectMake(0, self.view.bounds.size.height - self.shareButton.bounds.size.height, self.shareButton.bounds.size.width, self.shareButton.bounds.size.width)];
-
+    ShareViewController *svc = [[ShareViewController alloc] init];
+    svc.image = image;
+    [[self navigationController] pushViewController:svc animated:YES];
 }
 
 
