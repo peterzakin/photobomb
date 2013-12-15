@@ -7,7 +7,7 @@
 //
 
 #import "ShareViewController.h"
-
+#import <FacebookSDK/FacebookSDK.h>
 @interface ShareViewController ()
 
 @end
@@ -44,6 +44,14 @@
 - (void)shareButtonPressed
 {
     NSLog(@"in sharebuttnpressed");
+    
+    FBRequestConnection *connection = [[FBRequestConnection alloc] init];
+    [connection addRequest:[FBRequest requestForUploadPhoto:self.image]
+         completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+             NSLog(@"%@", error);
+         }
+     ];
+    [connection start];
 }
 
 
