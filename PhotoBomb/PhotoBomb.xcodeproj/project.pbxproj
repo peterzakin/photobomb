@@ -579,8 +579,8 @@
 				GCC_PREFIX_HEADER = "PhotoBomb/PhotoBomb-Prefix.pch";
 				INFOPLIST_FILE = "PhotoBomb/PhotoBomb-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
+					"./**",
 					"$(inherited)",
-					/Users/peterzakin/Desktop/photobomb/PhotoBomb/AviarySDK,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = (
@@ -609,8 +609,8 @@
 				GCC_PREFIX_HEADER = "PhotoBomb/PhotoBomb-Prefix.pch";
 				INFOPLIST_FILE = "PhotoBomb/PhotoBomb-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
+					"./**",
 					"$(inherited)",
-					/Users/peterzakin/Desktop/photobomb/PhotoBomb/AviarySDK,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = (
