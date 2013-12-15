@@ -32,12 +32,12 @@
     [self.view setBackgroundColor:[UIColor blackColor]];
     
     [self.loginButton setTitle:@"login" forState:UIControlStateNormal];
-    [self.loginButton addTarget:self action:@selector(loginUser) forControlEvents:UIControlEventTouchDown];
+    [self.loginButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchDown];
     
-                                                     
     // Do any additional setup after loading the view from its nib.
 }
 
+/*
 - (void) loginUser
 {
     // Login
@@ -62,12 +62,40 @@
   
     [[self navigationController] pushViewController:cvc animated:YES];
 }
-
+*/
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - FB Stuff
+- (IBAction)loginButtonTouchHandler:(id)sender  {
+    // The permissions requested from the user
+    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
+    
+    // Login PFUser using Facebook
+    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+        
+        if (!user) {
+            if (!error) {
+                NSLog(@"Uh oh. The user cancelled the Facebook login.");
+            } else {
+                NSLog(@"Uh oh. An error occurred: %@", error);
+            }
+        } else if (user.isNew) {
+            NSLog(@"User with facebook signed up and logged in!");
+            CameraViewController *cvc = [[CameraViewController alloc] init];
+            
+            [[self navigationController] pushViewController:cvc animated:YES];
+        } else {
+            NSLog(@"User with facebook logged in!");
+            CameraViewController *cvc = [[CameraViewController alloc] init];
+            
+            [[self navigationController] pushViewController:cvc animated:YES];
+        }
+    }];
 }
 
 @end

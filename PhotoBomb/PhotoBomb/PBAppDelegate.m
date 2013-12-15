@@ -31,6 +31,9 @@
     // Basic tracking of app opens
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // fb
+     [PFFacebookUtils initializeFacebook];
+    
        
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeViewController];
@@ -59,6 +62,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -160,6 +165,16 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - FB Sign In Methods
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
+
 }
 
 @end
