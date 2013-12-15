@@ -25,9 +25,9 @@
 		1B4585611842AFD800BBE4C9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585601842AFD800BBE4C9 /* CoreText.framework */; };
 		1B4585631842AFE000BBE4C9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585621842AFE000BBE4C9 /* OpenGLES.framework */; };
 		1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1618426E4B00B097AC /* libz.1.1.3.dylib */; };
-		1B9E6AEE1842BB3300BB29C8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AED1842BB3300BB29C8 /* FacebookSDK.framework */; };
 		1B9E6AFF1842E3FF00BB29C8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */; };
 		1B9E6B021844192B00BB29C8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6B00184418D800BB29C8 /* MessageUI.framework */; };
+		1BAB2856185E43BE0029D8EB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAB2855185E43BE0029D8EB /* FacebookSDK.framework */; };
 		1BE702CB1842AC20004CD1B5 /* peter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BE702CA1842AC20004CD1B5 /* peter.jpg */; };
 		1BE702DC1842AF73004CD1B5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */; };
 		1BE702DE1842AF7D004CD1B5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */; };
@@ -81,9 +81,9 @@
 		1B164A20183C358A0042511E /* PhotoBombTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBombTests.m; sourceTree = "<group>"; };
 		1B4585601842AFD800BBE4C9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1B4585621842AFE000BBE4C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		1B9E6AED1842BB3300BB29C8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1B9E6B00184418D800BB29C8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1BAB2855185E43BE0029D8EB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		1BE702CA1842AC20004CD1B5 /* peter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peter.jpg; sourceTree = "<group>"; };
 		1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
@@ -124,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BAB2856185E43BE0029D8EB /* FacebookSDK.framework in Frameworks */,
 				1B9E6B021844192B00BB29C8 /* MessageUI.framework in Frameworks */,
 				1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */,
 				1B4585631842AFE000BBE4C9 /* OpenGLES.framework in Frameworks */,
@@ -140,7 +141,6 @@
 				C930AD1B18426E5D00B097AC /* QuartzCore.framework in Frameworks */,
 				1BE748A31846BCE100E25E2A /* libAviarySDK.a in Frameworks */,
 				C930AD1918426E5600B097AC /* MobileCoreServices.framework in Frameworks */,
-				1B9E6AEE1842BB3300BB29C8 /* FacebookSDK.framework in Frameworks */,
 				C930AD1518426E3F00B097AC /* CoreLocation.framework in Frameworks */,
 				C930AD1318426E2F00B097AC /* CFNetwork.framework in Frameworks */,
 				C930AD1118426E2700B097AC /* AudioToolbox.framework in Frameworks */,
@@ -190,9 +190,9 @@
 		1B1649F4183C35890042511E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BAB2855185E43BE0029D8EB /* FacebookSDK.framework */,
 				1B9E6B00184418D800BB29C8 /* MessageUI.framework */,
 				1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */,
-				1B9E6AED1842BB3300BB29C8 /* FacebookSDK.framework */,
 				1B4585621842AFE000BBE4C9 /* OpenGLES.framework */,
 				1B4585601842AFD800BBE4C9 /* CoreText.framework */,
 				1BE702DF1842AF86004CD1B5 /* Accelerate.framework */,
@@ -574,8 +574,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"./**",
 					"$(inherited)",
-					/Users/peterzakin/Documents/FacebookSDK,
-					/Users/peterzakin/Desktop/photobomb/PhotoBomb,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomb/PhotoBomb-Prefix.pch";
@@ -605,6 +603,7 @@
 					"$(inherited)",
 					/Users/peterzakin/Documents/FacebookSDK,
 					/Users/peterzakin/Desktop/photobomb/PhotoBomb,
+					/Users/peterzakin/Desktop/photobomb/PhotoBomb/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomb/PhotoBomb-Prefix.pch";
