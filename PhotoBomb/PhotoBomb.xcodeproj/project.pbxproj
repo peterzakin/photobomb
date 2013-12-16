@@ -28,7 +28,6 @@
 		1B9E6AFF1842E3FF00BB29C8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */; };
 		1B9E6B021844192B00BB29C8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6B00184418D800BB29C8 /* MessageUI.framework */; };
 		1BAB2856185E43BE0029D8EB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAB2855185E43BE0029D8EB /* FacebookSDK.framework */; };
-		1BE702CB1842AC20004CD1B5 /* peter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BE702CA1842AC20004CD1B5 /* peter.jpg */; };
 		1BE702DC1842AF73004CD1B5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */; };
 		1BE702DE1842AF7D004CD1B5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */; };
 		1BE702E01842AF86004CD1B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DF1842AF86004CD1B5 /* Accelerate.framework */; };
@@ -48,6 +47,8 @@
 		C930AD2118426E7500B097AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD2018426E7500B097AC /* SystemConfiguration.framework */; };
 		C9765C83185E49FF00D7E49C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9765C81185E49FF00D7E49C /* ShareViewController.m */; };
 		C9765C84185E49FF00D7E49C /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9765C82185E49FF00D7E49C /* ShareViewController.xib */; };
+		C9765C87185E6CBE00D7E49C /* fb_login.png in Resources */ = {isa = PBXBuildFile; fileRef = C9765C86185E6CBE00D7E49C /* fb_login.png */; };
+		C9765C8A185E6CE000D7E49C /* peter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9765C89185E6CE000D7E49C /* peter.jpg */; };
 		C9FFF5131842B4B80053475A /* ParseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FFF5121842B4B80053475A /* ParseStore.m */; };
 		C9FFF5171842B8C90053475A /* PBImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FFF5161842B8C90053475A /* PBImage.m */; };
 /* End PBXBuildFile section */
@@ -86,7 +87,6 @@
 		1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1B9E6B00184418D800BB29C8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1BAB2855185E43BE0029D8EB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		1BE702CA1842AC20004CD1B5 /* peter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peter.jpg; sourceTree = "<group>"; };
 		1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		1BE702DF1842AF86004CD1B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -118,6 +118,8 @@
 		C9765C80185E49FF00D7E49C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewController.h; path = Controllers/ShareViewController/ShareViewController.h; sourceTree = "<group>"; };
 		C9765C81185E49FF00D7E49C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewController.m; path = Controllers/ShareViewController/ShareViewController.m; sourceTree = "<group>"; };
 		C9765C82185E49FF00D7E49C /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareViewController.xib; path = Controllers/ShareViewController/ShareViewController.xib; sourceTree = "<group>"; };
+		C9765C86185E6CBE00D7E49C /* fb_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fb_login.png; path = Static/fb_login.png; sourceTree = "<group>"; };
+		C9765C89185E6CE000D7E49C /* peter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = peter.jpg; path = Static/peter.jpg; sourceTree = "<group>"; };
 		C9FFF5111842B4B80053475A /* ParseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseStore.h; sourceTree = "<group>"; };
 		C9FFF5121842B4B80053475A /* ParseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseStore.m; sourceTree = "<group>"; };
 		C9FFF5151842B8C90053475A /* PBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PBImage.h; path = Models/PBImage.h; sourceTree = "<group>"; };
@@ -178,7 +180,7 @@
 				1B164A1A183C358A0042511E /* PhotoBombTests */,
 				1B1649F4183C35890042511E /* Frameworks */,
 				1B1649F3183C35890042511E /* Products */,
-				1BE702CA1842AC20004CD1B5 /* peter.jpg */,
+				C9765C88185E6CC800D7E49C /* Static */,
 				1BE748961846BCE100E25E2A /* AviarySDK */,
 			);
 			sourceTree = "<group>";
@@ -304,11 +306,20 @@
 			name = ShareViewController;
 			sourceTree = "<group>";
 		};
+		C9765C88185E6CC800D7E49C /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				C9765C86185E6CBE00D7E49C /* fb_login.png */,
+				C9765C89185E6CE000D7E49C /* peter.jpg */,
+			);
+			name = Static;
+			sourceTree = "<group>";
+		};
 		C9FFF50C1842B3AF0053475A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */,
 				1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */,
+				1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */,
 				C9765C82185E49FF00D7E49C /* ShareViewController.xib */,
 			);
 			name = Views;
@@ -437,13 +448,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9765C8A185E6CE000D7E49C /* peter.jpg in Resources */,
 				1B164A02183C35890042511E /* InfoPlist.strings in Resources */,
 				C9765C84185E49FF00D7E49C /* ShareViewController.xib in Resources */,
-				1BE702CB1842AC20004CD1B5 /* peter.jpg in Resources */,
 				1BE748A41846BCE100E25E2A /* AviarySDKResources.bundle in Resources */,
 				1BFABD8C1842791E00D7BB03 /* CameraViewController.xib in Resources */,
 				1B164A0D183C358A0042511E /* Images.xcassets in Resources */,
 				1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */,
+				C9765C87185E6CBE00D7E49C /* fb_login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
