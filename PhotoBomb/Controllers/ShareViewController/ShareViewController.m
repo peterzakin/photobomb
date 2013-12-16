@@ -54,5 +54,9 @@
     [connection start];
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 
 @end
