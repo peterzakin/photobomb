@@ -81,6 +81,7 @@
                 NSLog(@"Uh oh. The user cancelled the Facebook login.");
             } else {
                 NSLog(@"Uh oh. An error occurred: %@", error);
+                
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
