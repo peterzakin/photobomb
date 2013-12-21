@@ -57,6 +57,7 @@
      */
     
     // Return user to beginning of app, i.e. take another picture
+#warning OLD REDO
     [[self navigationController] popViewControllerAnimated:YES];
     CameraViewController *cvc = [[CameraViewController alloc] init];
     [[self navigationController] pushViewController:cvc animated:YES];

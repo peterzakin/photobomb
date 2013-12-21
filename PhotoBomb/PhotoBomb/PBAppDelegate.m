@@ -9,7 +9,6 @@
 #import "PBAppDelegate.h"
 #import <Parse/Parse.h>
 #import "HomeViewController.h"
-#import "EditViewController.h"
 #import "PBImage.h"
 
 @implementation PBAppDelegate
@@ -37,8 +36,7 @@
     
        
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
-    EditViewController *editViewController = [[EditViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:editViewController];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     self.window.rootViewController = nc;
     
     return YES;

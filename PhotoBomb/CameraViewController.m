@@ -8,11 +8,6 @@
 
 #import "CameraViewController.h"
 #import "EditViewController.h"
-#import "ShareViewController.h"
-
-@interface CameraViewController ()
-
-@end
 
 @implementation CameraViewController
 
@@ -36,23 +31,14 @@
         [picker setDelegate:self];
         [self presentViewController:picker animated:NO completion:nil];
     } else {
-        [self dismissViewControllerAnimated:YES completion:nil];
-        UIImage *image = [UIImage imageNamed:@"peter.jpg"];
+        NSLog(@"No camera detected");
+        //UIImage *image = [UIImage imageNamed:@"peter.jpg"];
+        //[self dismissViewControllerAnimated:YES completion:nil];
         EditViewController *evc = [[EditViewController alloc] init];
-        evc.image = image;
+        //evc.image = image;
+        UINavigationController *foo = [self navigationController];
         [[self navigationController] pushViewController:evc animated:YES];
     }
-    
-    // probably nothing here for FB
-    FBRequest *request = [FBRequest requestForMe];
-    
-    
-    // Send request to Facebook
-    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        // handle response
-        //NSLog(@"%@", result);
-    }];
-
 }
 
 /* Once image has been selected, go to EditViewController */
@@ -61,7 +47,7 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:^(void){
         EditViewController *evc = [[EditViewController alloc] init];
-        evc.image = image;
+        //evc.image = image;
         [[self navigationController] pushViewController:evc animated:YES];
     }];
 

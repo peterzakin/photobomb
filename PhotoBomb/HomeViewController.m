@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "CameraViewController.h"
 #import <Parse/Parse.h>
-
+#import "EditViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -86,7 +86,8 @@
             [[self navigationController] pushViewController:cvc animated:YES];
         } else {
             NSLog(@"User with facebook logged in!");
-            CameraViewController *cvc = [[CameraViewController alloc] init];
+            //CameraViewController *cvc = [[CameraViewController alloc] init];
+            EditViewController *cvc = [[EditViewController alloc] init];
             [[self navigationController] pushViewController:cvc animated:YES];
         }
     }];

@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditViewController : UIViewController <UINavigationControllerDelegate> {
-    
-}
-@property (strong, nonatomic) UIImage *image;
-@property (weak, nonatomic) IBOutlet UIButton *button;
+@interface EditViewController : UIViewController
 
 @end
