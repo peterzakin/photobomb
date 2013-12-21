@@ -80,14 +80,14 @@
                 NSLog(@"Uh oh. An error occurred: %@", error);
                 
             }
-        } else if (user.isNew) {
-            NSLog(@"User with facebook signed up and logged in!");
-            CameraViewController *cvc = [[CameraViewController alloc] init];
-            [[self navigationController] pushViewController:cvc animated:YES];
-        } else {
+        }
+        else {
+            if (user.isNew) {
+                //??
+            }
             NSLog(@"User with facebook logged in!");
             //CameraViewController *cvc = [[CameraViewController alloc] init];
-            EditViewController *cvc = [[EditViewController alloc] init];
+            EditViewController *cvc = [[EditViewController alloc] initWithImage:nil];
             [[self navigationController] pushViewController:cvc animated:YES];
         }
     }];

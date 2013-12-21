@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DAScratchPadView.h"
 
 @interface EditViewController : UIViewController
+@property (strong, retain) UIImage *originalImage;
+@property (strong, retain) DAScratchPadView *scratchpad;
+
+-(id)initWithImage:(UIImage *)image;
 
 @end

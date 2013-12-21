@@ -46,7 +46,7 @@
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:^(void){
-        EditViewController *evc = [[EditViewController alloc] init];
+        EditViewController *evc = [[EditViewController alloc] initWithImage:image];
         //evc.image = image;
         [[self navigationController] pushViewController:evc animated:YES];
     }];
