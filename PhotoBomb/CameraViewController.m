@@ -7,6 +7,7 @@
 //
 
 #import "CameraViewController.h"
+#import "EditViewController.h"
 #import "ShareViewController.h"
 
 @interface CameraViewController ()
@@ -35,27 +36,33 @@
         [picker setDelegate:self];
         [self presentViewController:picker animated:NO completion:nil];
     } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
         UIImage *image = [UIImage imageNamed:@"peter.jpg"];
-        [self displayEditorForImage:image];
+        EditViewController *evc = [[EditViewController alloc] init];
+        evc.image = image;
+        [[self navigationController] pushViewController:evc animated:YES];
     }
     
+    // probably nothing here for FB
     FBRequest *request = [FBRequest requestForMe];
     
     
     // Send request to Facebook
-
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         // handle response
-        NSLog(@"%@", result);
+        //NSLog(@"%@", result);
     }];
 
 }
 
+/* Once image has been selected, go to EditViewController */
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:^(void){
-        [self displayEditorForImage:image];
+        EditViewController *evc = [[EditViewController alloc] init];
+        evc.image = image;
+        [[self navigationController] pushViewController:evc animated:YES];
     }];
 
 }
@@ -74,16 +81,18 @@
 }
 
 #pragma mark - Aviary stuff
-- (void)displayEditorForImage:(UIImage *)imageToEdit
+/* DEPRACATED AVIARY */
+/*- (void)displayEditorForImage:(UIImage *)imageToEdit
 {
     AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit];
     [editorController setDelegate:self];
     [self presentViewController:editorController animated:YES completion:nil];
 }
+*/
 
 /* Aviary delegate method that is called when Aviary is done with an image. 
  This method then immediately moves logic to ShareViewController */
-- (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
+/*- (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
 {
     [editor dismissViewControllerAnimated:YES completion:nil];
     
@@ -100,6 +109,7 @@
     [editor dismissViewControllerAnimated:YES completion:nil];
 
 }
+*/
 
 - (BOOL)prefersStatusBarHidden {
     return YES;

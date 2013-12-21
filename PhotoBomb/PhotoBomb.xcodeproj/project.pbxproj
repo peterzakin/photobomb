@@ -45,7 +45,9 @@
 		C930AD1D18426E6300B097AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1C18426E6300B097AC /* Security.framework */; };
 		C930AD1F18426E6B00B097AC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1E18426E6B00B097AC /* StoreKit.framework */; };
 		C930AD2118426E7500B097AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD2018426E7500B097AC /* SystemConfiguration.framework */; };
-		C93F876C1866330C00B7CBD4 /* DAScratchPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F876B1866330C00B7CBD4 /* DAScratchPadView.m */; };
+		C93F8771186637AA00B7CBD4 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F876F186637AA00B7CBD4 /* EditViewController.m */; };
+		C93F8772186637AA00B7CBD4 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C93F8770186637AA00B7CBD4 /* EditViewController.xib */; };
+		C93F877518663BEF00B7CBD4 /* DAScratchPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F877418663BEF00B7CBD4 /* DAScratchPadView.m */; };
 		C9765C83185E49FF00D7E49C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9765C81185E49FF00D7E49C /* ShareViewController.m */; };
 		C9765C84185E49FF00D7E49C /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9765C82185E49FF00D7E49C /* ShareViewController.xib */; };
 		C9765C87185E6CBE00D7E49C /* fb_login.png in Resources */ = {isa = PBXBuildFile; fileRef = C9765C86185E6CBE00D7E49C /* fb_login.png */; };
@@ -117,8 +119,11 @@
 		C930AD1C18426E6300B097AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C930AD1E18426E6B00B097AC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C930AD2018426E7500B097AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C93F876A1866330C00B7CBD4 /* DAScratchPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAScratchPadView.h; sourceTree = "<group>"; };
-		C93F876B1866330C00B7CBD4 /* DAScratchPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAScratchPadView.m; sourceTree = "<group>"; };
+		C93F876E186637AA00B7CBD4 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = Controllers/EditViewController/EditViewController.h; sourceTree = "<group>"; };
+		C93F876F186637AA00B7CBD4 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = Controllers/EditViewController/EditViewController.m; sourceTree = "<group>"; };
+		C93F8770186637AA00B7CBD4 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditViewController.xib; path = Controllers/EditViewController/EditViewController.xib; sourceTree = "<group>"; };
+		C93F877318663BEF00B7CBD4 /* DAScratchPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAScratchPadView.h; path = DAScratchPadView/DAScratchPadView.h; sourceTree = SOURCE_ROOT; };
+		C93F877418663BEF00B7CBD4 /* DAScratchPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAScratchPadView.m; path = DAScratchPadView/DAScratchPadView.m; sourceTree = SOURCE_ROOT; };
 		C9765C80185E49FF00D7E49C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewController.h; path = Controllers/ShareViewController/ShareViewController.h; sourceTree = "<group>"; };
 		C9765C81185E49FF00D7E49C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewController.m; path = Controllers/ShareViewController/ShareViewController.m; sourceTree = "<group>"; };
 		C9765C82185E49FF00D7E49C /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareViewController.xib; path = Controllers/ShareViewController/ShareViewController.xib; sourceTree = "<group>"; };
@@ -180,7 +185,6 @@
 				C9FFF5141842B8820053475A /* Models */,
 				C9FFF50C1842B3AF0053475A /* Views */,
 				C9FFF50D1842B3BE0053475A /* Controllers */,
-				C93F87691866330C00B7CBD4 /* DAScratchPad */,
 				1B1649FD183C35890042511E /* PhotoBomb */,
 				1B164A1A183C358A0042511E /* PhotoBombTests */,
 				1B1649F4183C35890042511E /* Frameworks */,
@@ -303,13 +307,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C93F87691866330C00B7CBD4 /* DAScratchPad */ = {
+		C93F87691866330C00B7CBD4 /* DAScratchPadView */ = {
 			isa = PBXGroup;
 			children = (
-				C93F876A1866330C00B7CBD4 /* DAScratchPadView.h */,
-				C93F876B1866330C00B7CBD4 /* DAScratchPadView.m */,
+				C93F877318663BEF00B7CBD4 /* DAScratchPadView.h */,
+				C93F877418663BEF00B7CBD4 /* DAScratchPadView.m */,
 			);
+			name = DAScratchPadView;
 			path = DAScratchPad;
+			sourceTree = "<group>";
+		};
+		C93F876D1866377700B7CBD4 /* EditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C93F876E186637AA00B7CBD4 /* EditViewController.h */,
+				C93F876F186637AA00B7CBD4 /* EditViewController.m */,
+				C93F8770186637AA00B7CBD4 /* EditViewController.xib */,
+			);
+			name = EditViewController;
 			sourceTree = "<group>";
 		};
 		C9765C85185E4A0A00D7E49C /* ShareViewController */ = {
@@ -317,6 +332,7 @@
 			children = (
 				C9765C80185E49FF00D7E49C /* ShareViewController.h */,
 				C9765C81185E49FF00D7E49C /* ShareViewController.m */,
+				C9765C82185E49FF00D7E49C /* ShareViewController.xib */,
 			);
 			name = ShareViewController;
 			sourceTree = "<group>";
@@ -333,9 +349,7 @@
 		C9FFF50C1842B3AF0053475A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */,
-				1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */,
-				C9765C82185E49FF00D7E49C /* ShareViewController.xib */,
+				C93F87691866330C00B7CBD4 /* DAScratchPadView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -346,6 +360,7 @@
 				C9FFF5101842B3EF0053475A /* ParseStore */,
 				C9FFF50F1842B3DF0053475A /* HomeViewController */,
 				C9FFF50E1842B3D20053475A /* CameraViewController */,
+				C93F876D1866377700B7CBD4 /* EditViewController */,
 				C9765C85185E4A0A00D7E49C /* ShareViewController */,
 			);
 			name = Controllers;
@@ -356,6 +371,7 @@
 			children = (
 				1BFABD881842791D00D7BB03 /* CameraViewController.h */,
 				1BFABD891842791D00D7BB03 /* CameraViewController.m */,
+				1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */,
 			);
 			name = CameraViewController;
 			sourceTree = "<group>";
@@ -365,6 +381,7 @@
 			children = (
 				1BFABD7918417E5000D7BB03 /* HomeViewController.h */,
 				1BFABD7A18417E5000D7BB03 /* HomeViewController.m */,
+				1BFABD7B18417E5000D7BB03 /* HomeViewController.xib */,
 			);
 			name = HomeViewController;
 			sourceTree = "<group>";
@@ -471,6 +488,7 @@
 				1BE748A41846BCE100E25E2A /* AviarySDKResources.bundle in Resources */,
 				1BFABD8C1842791E00D7BB03 /* CameraViewController.xib in Resources */,
 				1B164A0D183C358A0042511E /* Images.xcassets in Resources */,
+				C93F8772186637AA00B7CBD4 /* EditViewController.xib in Resources */,
 				1BFABD7D18417E5000D7BB03 /* HomeViewController.xib in Resources */,
 				C9765C87185E6CBE00D7E49C /* fb_login.png in Resources */,
 			);
@@ -528,11 +546,12 @@
 				1BFABD8B1842791E00D7BB03 /* CameraViewController.m in Sources */,
 				C9765C83185E49FF00D7E49C /* ShareViewController.m in Sources */,
 				C9FFF5171842B8C90053475A /* PBImage.m in Sources */,
+				C93F8771186637AA00B7CBD4 /* EditViewController.m in Sources */,
 				1B164A0B183C358A0042511E /* PhotoBomb.xcdatamodeld in Sources */,
 				1B164A08183C358A0042511E /* PBAppDelegate.m in Sources */,
 				1B164A04183C35890042511E /* main.m in Sources */,
+				C93F877518663BEF00B7CBD4 /* DAScratchPadView.m in Sources */,
 				1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */,
-				C93F876C1866330C00B7CBD4 /* DAScratchPadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "PBAppDelegate.h"
 #import <Parse/Parse.h>
 #import "HomeViewController.h"
+#import "EditViewController.h"
 #import "PBImage.h"
 
 @implementation PBAppDelegate
@@ -21,7 +22,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor blueColor];
     [self.window makeKeyAndVisible];
     
     // Init Parse
@@ -32,11 +33,12 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // fb
-     [PFFacebookUtils initializeFacebook];
+    [PFFacebookUtils initializeFacebook];
     
        
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    EditViewController *editViewController = [[EditViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:editViewController];
     self.window.rootViewController = nc;
     
     return YES;

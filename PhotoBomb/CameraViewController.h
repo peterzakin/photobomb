@@ -11,6 +11,6 @@
 #import <Parse/Parse.h>
 
 @interface CameraViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate>
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView; // to delete
 
 @end
