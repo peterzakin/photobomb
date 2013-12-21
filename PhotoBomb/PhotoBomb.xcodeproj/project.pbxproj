@@ -45,6 +45,7 @@
 		C930AD1D18426E6300B097AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1C18426E6300B097AC /* Security.framework */; };
 		C930AD1F18426E6B00B097AC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1E18426E6B00B097AC /* StoreKit.framework */; };
 		C930AD2118426E7500B097AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD2018426E7500B097AC /* SystemConfiguration.framework */; };
+		C93F876C1866330C00B7CBD4 /* DAScratchPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F876B1866330C00B7CBD4 /* DAScratchPadView.m */; };
 		C9765C83185E49FF00D7E49C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9765C81185E49FF00D7E49C /* ShareViewController.m */; };
 		C9765C84185E49FF00D7E49C /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9765C82185E49FF00D7E49C /* ShareViewController.xib */; };
 		C9765C87185E6CBE00D7E49C /* fb_login.png in Resources */ = {isa = PBXBuildFile; fileRef = C9765C86185E6CBE00D7E49C /* fb_login.png */; };
@@ -86,7 +87,7 @@
 		1B4585621842AFE000BBE4C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1B9E6B00184418D800BB29C8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		1BC6899E186622BD0022487C /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
+		1BC6899E186622BD0022487C /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		1BE702DF1842AF86004CD1B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -116,6 +117,8 @@
 		C930AD1C18426E6300B097AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C930AD1E18426E6B00B097AC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C930AD2018426E7500B097AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C93F876A1866330C00B7CBD4 /* DAScratchPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAScratchPadView.h; sourceTree = "<group>"; };
+		C93F876B1866330C00B7CBD4 /* DAScratchPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAScratchPadView.m; sourceTree = "<group>"; };
 		C9765C80185E49FF00D7E49C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewController.h; path = Controllers/ShareViewController/ShareViewController.h; sourceTree = "<group>"; };
 		C9765C81185E49FF00D7E49C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewController.m; path = Controllers/ShareViewController/ShareViewController.m; sourceTree = "<group>"; };
 		C9765C82185E49FF00D7E49C /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareViewController.xib; path = Controllers/ShareViewController/ShareViewController.xib; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C930AD1B18426E5D00B097AC /* QuartzCore.framework in Frameworks */,
 				1BC6899F186622BD0022487C /* libPods-Facebook-iOS-SDK.a in Frameworks */,
 				1B9E6B021844192B00BB29C8 /* MessageUI.framework in Frameworks */,
 				1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */,
@@ -146,7 +150,6 @@
 				1B9E6AFF1842E3FF00BB29C8 /* Parse.framework in Frameworks */,
 				C930AD1F18426E6B00B097AC /* StoreKit.framework in Frameworks */,
 				C930AD1D18426E6300B097AC /* Security.framework in Frameworks */,
-				C930AD1B18426E5D00B097AC /* QuartzCore.framework in Frameworks */,
 				1BE748A31846BCE100E25E2A /* libAviarySDK.a in Frameworks */,
 				C930AD1918426E5600B097AC /* MobileCoreServices.framework in Frameworks */,
 				C930AD1518426E3F00B097AC /* CoreLocation.framework in Frameworks */,
@@ -177,6 +180,7 @@
 				C9FFF5141842B8820053475A /* Models */,
 				C9FFF50C1842B3AF0053475A /* Views */,
 				C9FFF50D1842B3BE0053475A /* Controllers */,
+				C93F87691866330C00B7CBD4 /* DAScratchPad */,
 				1B1649FD183C35890042511E /* PhotoBomb */,
 				1B164A1A183C358A0042511E /* PhotoBombTests */,
 				1B1649F4183C35890042511E /* Frameworks */,
@@ -297,6 +301,15 @@
 				1BE748A21846BCE100E25E2A /* AviarySDKResources.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C93F87691866330C00B7CBD4 /* DAScratchPad */ = {
+			isa = PBXGroup;
+			children = (
+				C93F876A1866330C00B7CBD4 /* DAScratchPadView.h */,
+				C93F876B1866330C00B7CBD4 /* DAScratchPadView.m */,
+			);
+			path = DAScratchPad;
 			sourceTree = "<group>";
 		};
 		C9765C85185E4A0A00D7E49C /* ShareViewController */ = {
@@ -519,6 +532,7 @@
 				1B164A08183C358A0042511E /* PBAppDelegate.m in Sources */,
 				1B164A04183C35890042511E /* main.m in Sources */,
 				1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */,
+				C93F876C1866330C00B7CBD4 /* DAScratchPadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
