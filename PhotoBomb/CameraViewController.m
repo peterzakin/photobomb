@@ -60,6 +60,12 @@
 
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -92,9 +98,11 @@
     // Handle cancelation here
     NSLog(@"PHOTO EDITOR CANCELLED");
     [editor dismissViewControllerAnimated:YES completion:nil];
-    
-    //goes back to first screen
-    [[self navigationController] popViewControllerAnimated:YES];
+
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end

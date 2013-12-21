@@ -62,5 +62,9 @@
     [[self navigationController] pushViewController:cvc animated:YES];
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 
 @end
