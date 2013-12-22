@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PBLibraryViewController.h"
 
 @interface HomeViewController : UIViewController
 {
 }
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
+
+@property PBLibraryViewController *lvc;
 
 @end

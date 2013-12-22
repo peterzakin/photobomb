@@ -37,7 +37,7 @@
        
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeViewController];
-    self.window.rootViewController = nc;
+    [self.window setRootViewController:nc];
     
     return YES;
 }

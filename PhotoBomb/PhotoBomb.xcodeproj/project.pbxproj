@@ -22,8 +22,11 @@
 		1B164A17183C358A0042511E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1649FB183C35890042511E /* CoreData.framework */; };
 		1B164A1F183C358A0042511E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B164A1D183C358A0042511E /* InfoPlist.strings */; };
 		1B164A21183C358A0042511E /* PhotoBombTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B164A20183C358A0042511E /* PhotoBombTests.m */; };
+		1B2672811866629900883883 /* PBLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B26727F1866629900883883 /* PBLibraryViewController.m */; };
+		1B2672821866629900883883 /* PBLibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B2672801866629900883883 /* PBLibraryViewController.xib */; };
 		1B4585611842AFD800BBE4C9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585601842AFD800BBE4C9 /* CoreText.framework */; };
 		1B4585631842AFE000BBE4C9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585621842AFE000BBE4C9 /* OpenGLES.framework */; };
+		1B66FADD18663B6E00A6F3F8 /* PBLibraryPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B66FADC18663B6E00A6F3F8 /* PBLibraryPhotoCell.m */; };
 		1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1618426E4B00B097AC /* libz.1.1.3.dylib */; };
 		1B9E6AFF1842E3FF00BB29C8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */; };
 		1B9E6B021844192B00BB29C8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6B00184418D800BB29C8 /* MessageUI.framework */; };
@@ -82,11 +85,16 @@
 		1B164A1C183C358A0042511E /* PhotoBombTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoBombTests-Info.plist"; sourceTree = "<group>"; };
 		1B164A1E183C358A0042511E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B164A20183C358A0042511E /* PhotoBombTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBombTests.m; sourceTree = "<group>"; };
+		1B26727E1866629900883883 /* PBLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLibraryViewController.h; sourceTree = "<group>"; };
+		1B26727F1866629900883883 /* PBLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLibraryViewController.m; sourceTree = "<group>"; };
+		1B2672801866629900883883 /* PBLibraryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBLibraryViewController.xib; sourceTree = "<group>"; };
 		1B4585601842AFD800BBE4C9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1B4585621842AFE000BBE4C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1B66FADB18663B6E00A6F3F8 /* PBLibraryPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLibraryPhotoCell.h; sourceTree = "<group>"; };
+		1B66FADC18663B6E00A6F3F8 /* PBLibraryPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLibraryPhotoCell.m; sourceTree = "<group>"; };
 		1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1B9E6B00184418D800BB29C8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		1BC6899E186622BD0022487C /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
+		1BC6899E186622BD0022487C /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		1BE702DF1842AF86004CD1B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -330,6 +338,9 @@
 		C9FFF50D1842B3BE0053475A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1B26727E1866629900883883 /* PBLibraryViewController.h */,
+				1B26727F1866629900883883 /* PBLibraryViewController.m */,
+				1B2672801866629900883883 /* PBLibraryViewController.xib */,
 				C9FFF5101842B3EF0053475A /* ParseStore */,
 				C9FFF50F1842B3DF0053475A /* HomeViewController */,
 				C9FFF50E1842B3D20053475A /* CameraViewController */,
@@ -352,6 +363,8 @@
 			children = (
 				1BFABD7918417E5000D7BB03 /* HomeViewController.h */,
 				1BFABD7A18417E5000D7BB03 /* HomeViewController.m */,
+				1B66FADB18663B6E00A6F3F8 /* PBLibraryPhotoCell.h */,
+				1B66FADC18663B6E00A6F3F8 /* PBLibraryPhotoCell.m */,
 			);
 			name = HomeViewController;
 			sourceTree = "<group>";
@@ -454,6 +467,7 @@
 			files = (
 				C9765C8A185E6CE000D7E49C /* peter.jpg in Resources */,
 				1B164A02183C35890042511E /* InfoPlist.strings in Resources */,
+				1B2672821866629900883883 /* PBLibraryViewController.xib in Resources */,
 				C9765C84185E49FF00D7E49C /* ShareViewController.xib in Resources */,
 				1BE748A41846BCE100E25E2A /* AviarySDKResources.bundle in Resources */,
 				1BFABD8C1842791E00D7BB03 /* CameraViewController.xib in Resources */,
@@ -516,8 +530,10 @@
 				C9765C83185E49FF00D7E49C /* ShareViewController.m in Sources */,
 				C9FFF5171842B8C90053475A /* PBImage.m in Sources */,
 				1B164A0B183C358A0042511E /* PhotoBomb.xcdatamodeld in Sources */,
+				1B66FADD18663B6E00A6F3F8 /* PBLibraryPhotoCell.m in Sources */,
 				1B164A08183C358A0042511E /* PBAppDelegate.m in Sources */,
 				1B164A04183C35890042511E /* main.m in Sources */,
+				1B2672811866629900883883 /* PBLibraryViewController.m in Sources */,
 				1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

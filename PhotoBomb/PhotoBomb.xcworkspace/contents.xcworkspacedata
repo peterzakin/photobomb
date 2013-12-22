@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PBLibraryViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:PBLibraryViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:PBLibraryViewController.xib">
+   </FileRef>
+   <FileRef
       location = "group:PhotoBomb.xcodeproj">
    </FileRef>
    <FileRef

@@ -28,39 +28,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES];
     //[self.view setBackgroundColor:[UIColor blackColor]];
 
     // FB login button
     //[self.loginButton setTitle:@"Login With Facebook" forState:UIControlStateNormal];
     [self.loginButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchDown];
     
+    if ([PFUser currentUser] && // Check if a user is cached
+        [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) // Check if user is linked to Facebook
+    {    //logged in
+//        [self.navigationController setToolbarHidden:NO];
+        [self.navigationItem setTitle:@"Peter Zakin"];
+        
+        [self.loginButton setHidden:YES];
+        self.lvc = [[PBLibraryViewController alloc] init];
+//        [lvc.tableView reloadData];
+        
+        [self.view addSubview:self.lvc.view];
+        
+    
+    }
+    else {
+        [self.navigationController setNavigationBarHidden:YES];
+        
+    }
     // Do any additional setup after loading the view from its nib.
 }
-
-/*
-- (void) loginUser
-{
-    // Login
-    PFUser *currentUser = [PFUser currentUser];
-    if (!currentUser) {
-        // Dummy username and password
-        PFUser *user = [PFUser user];
-        user.username = @"test";
-        user.password = @"password";
-        
-        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (error) {
-                // Assume the error is because the user already existed.
-                [PFUser logInWithUsername:@"test" password:@"password"];
-            }
-        }];
-    }
-    CameraViewController *cvc = [[CameraViewController alloc] init];
-  
-    [[self navigationController] pushViewController:cvc animated:YES];
-}
-*/
 
 - (void)didReceiveMemoryWarning
 {
