@@ -9,6 +9,7 @@
 #import "PBAppDelegate.h"
 #import <Parse/Parse.h>
 #import "HomeViewController.h"
+#import "EditViewController.h"
 #import "PBImage.h"
 
 @implementation PBAppDelegate
@@ -38,6 +39,10 @@
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     self.window.rootViewController = nc;
+    
+    // For speed of debugging, skip over home screen
+    EditViewController *cvc = [[EditViewController alloc] initWithImage:nil];
+    [nc pushViewController:cvc animated:YES];
     
     return YES;
 }

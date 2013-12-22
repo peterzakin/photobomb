@@ -11,8 +11,9 @@
 
 @interface EditViewController : UIViewController
 @property (strong, retain) UIImage *originalImage;
+@property (strong, retain) IBOutlet UIButton *finishButton;
 @property (strong, retain) DAScratchPadView *scratchpad;
 
--(id)initWithImage:(UIImage *)image;
+- (id)initWithImage:(UIImage *)image;
 
 @end

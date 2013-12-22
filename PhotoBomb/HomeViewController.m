@@ -32,32 +32,9 @@
 
     // FB login button
     //[self.loginButton setTitle:@"Login With Facebook" forState:UIControlStateNormal];
-    [self.loginButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchDown];
+    [self.loginButton addTarget:self action:@selector(loginButtonTouchHandler:)
+               forControlEvents:UIControlEventTouchUpInside];
 }
-
-/*
-- (void) loginUser
-{
-    // Login
-    PFUser *currentUser = [PFUser currentUser];
-    if (!currentUser) {
-        // Dummy username and password
-        PFUser *user = [PFUser user];
-        user.username = @"test";
-        user.password = @"password";
-        
-        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (error) {
-                // Assume the error is because the user already existed.
-                [PFUser logInWithUsername:@"test" password:@"password"];
-            }
-        }];
-    }
-    CameraViewController *cvc = [[CameraViewController alloc] init];
-  
-    [[self navigationController] pushViewController:cvc animated:YES];
-}
-*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -66,7 +43,8 @@
 }
 
 #pragma mark - FB Stuff
-- (IBAction)loginButtonTouchHandler:(id)sender  {
+- (IBAction)loginButtonTouchHandler:(id)sender
+{
     // The permissions requested from the user
     NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"publish_actions"];
     
@@ -83,7 +61,7 @@
         }
         else {
             if (user.isNew) {
-                //??
+                // Add behavior for newly logged in users
             }
             NSLog(@"User with facebook logged in!");
             //CameraViewController *cvc = [[CameraViewController alloc] init];
@@ -96,5 +74,29 @@
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
+/*
+ - (void) loginUser
+ {
+ // Login
+ PFUser *currentUser = [PFUser currentUser];
+ if (!currentUser) {
+ // Dummy username and password
+ PFUser *user = [PFUser user];
+ user.username = @"test";
+ user.password = @"password";
+ 
+ [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+ if (error) {
+ // Assume the error is because the user already existed.
+ [PFUser logInWithUsername:@"test" password:@"password"];
+ }
+ }];
+ }
+ CameraViewController *cvc = [[CameraViewController alloc] init];
+ 
+ [[self navigationController] pushViewController:cvc animated:YES];
+ }
+ */
 
 @end
