@@ -28,24 +28,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self.view setBackgroundColor:[UIColor blackColor]];
-
-    // FB login button
-    //[self.loginButton setTitle:@"Login With Facebook" forState:UIControlStateNormal];
+    
     [self.loginButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchDown];
     
     if ([PFUser currentUser] && // Check if a user is cached
         [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) // Check if user is linked to Facebook
-    {    //logged in
-//        [self.navigationController setToolbarHidden:NO];
+    {
         [self.navigationItem setTitle:@"Peter Zakin"];
         
         [self.loginButton setHidden:YES];
         self.lvc = [[PBLibraryViewController alloc] init];
-//        [lvc.tableView reloadData];
-        
         [self.view addSubview:self.lvc.view];
-        
+        [self.lvc.tableView reloadData];
     
     }
     else {

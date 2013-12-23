@@ -14,26 +14,14 @@
 
 @implementation PBLibraryViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
-        [self.tableView setDelegate:self];
-        [self.tableView setDataSource:self];
-        [self.view addSubview:self.tableView];
-        
-    }
-    return self;
-}
-
 - (id)init
 {
     self = [super init];
     if(self){
-        
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
+        self.photos = [[NSMutableArray alloc] init];
+        [self.photos addObject:[UIImage imageNamed:@"peter.jpg"]];
+        NSLog(@"%d", [self.photos count]);
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
         [self.tableView setDelegate:self];
         [self.tableView setDataSource:self];
         [self.view addSubview:self.tableView];
@@ -59,7 +47,8 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    NSLog(@"%d", [self.photos count]);
+    return [self.photos count];
 }
 
 
@@ -71,7 +60,8 @@
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         
     //}
-    [[cell textLabel] setText:@"yooo"];
+
+    
     return cell;
 }
 
