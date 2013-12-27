@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PBLibraryPhotoCell.h"
 
 @interface PBLibraryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {

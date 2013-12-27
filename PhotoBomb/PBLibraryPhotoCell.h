@@ -10,4 +10,8 @@
 
 @interface PBLibraryPhotoCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *imageView;
+
+- (void)applyImage:(UIImage *)image;
+
 @end

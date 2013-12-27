@@ -7,42 +7,50 @@
 //
 
 #import "PBLibraryViewController.h"
+#import "ParseStore.h"
+#import <Parse/Parse.h>
 
 @interface PBLibraryViewController ()
 
 @end
 
+NSInteger PHOTO_CELL_SIZE = 350;
+
+
 @implementation PBLibraryViewController
 
 - (id)init
 {
+    //probably want to make this initWithUserId
+    
     self = [super init];
     if(self){
         self.photos = [[NSMutableArray alloc] init];
-        [self.photos addObject:[UIImage imageNamed:@"peter.jpg"]];
-        NSLog(@"%d", [self.photos count]);
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
-        [self.tableView setDelegate:self];
-        [self.tableView setDataSource:self];
-        [self.view addSubview:self.tableView];
+        
+        //HERE IS WHERE WE WANT TO LOAD PHOTOS
+                
+        UIImage *photo = [UIImage imageNamed:@"peter.jpg"];
+        [self.photos addObject:photo];
+        [self.photos addObject:photo];
+    
     }
     return self;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view from its nib.
+    UIView *profileCard = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
+    
+    
+    [self.view addSubview:profileCard];
+    [self setupTableView];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -54,15 +62,31 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"YOOO");
-    //UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
-   // if(!cell){
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        
-    //}
-
+    PBLibraryPhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    UIImage *photo = [self.photos objectAtIndex:[indexPath row]];
+    
+    if (!cell){
+        cell = [[PBLibraryPhotoCell alloc] init];
+    }
+    
+    //method adds image to the cell's imageView.
+    [cell applyImage:photo];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return PHOTO_CELL_SIZE;
+}
+
+-(void)setupTableView
+{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+    [self.view addSubview:self.tableView];
 }
 
 

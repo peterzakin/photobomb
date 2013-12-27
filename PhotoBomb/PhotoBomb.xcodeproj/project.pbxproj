@@ -307,6 +307,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1BED6BEF186CFD1C00140B1B /* PBLibraryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B26727E1866629900883883 /* PBLibraryViewController.h */,
+				1B26727F1866629900883883 /* PBLibraryViewController.m */,
+				1B2672801866629900883883 /* PBLibraryViewController.xib */,
+				1B66FADB18663B6E00A6F3F8 /* PBLibraryPhotoCell.h */,
+				1B66FADC18663B6E00A6F3F8 /* PBLibraryPhotoCell.m */,
+			);
+			name = PBLibraryViewController;
+			sourceTree = "<group>";
+		};
 		C9765C85185E4A0A00D7E49C /* ShareViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,9 +350,7 @@
 		C9FFF50D1842B3BE0053475A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B26727E1866629900883883 /* PBLibraryViewController.h */,
-				1B26727F1866629900883883 /* PBLibraryViewController.m */,
-				1B2672801866629900883883 /* PBLibraryViewController.xib */,
+				1BED6BEF186CFD1C00140B1B /* PBLibraryViewController */,
 				C9FFF5101842B3EF0053475A /* ParseStore */,
 				C9FFF50F1842B3DF0053475A /* HomeViewController */,
 				C9FFF50E1842B3D20053475A /* CameraViewController */,
@@ -363,8 +373,6 @@
 			children = (
 				1BFABD7918417E5000D7BB03 /* HomeViewController.h */,
 				1BFABD7A18417E5000D7BB03 /* HomeViewController.m */,
-				1B66FADB18663B6E00A6F3F8 /* PBLibraryPhotoCell.h */,
-				1B66FADC18663B6E00A6F3F8 /* PBLibraryPhotoCell.m */,
 			);
 			name = HomeViewController;
 			sourceTree = "<group>";
