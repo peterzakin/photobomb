@@ -79,6 +79,7 @@
     AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit];
     [editorController setDelegate:self];
     [self presentViewController:editorController animated:YES completion:nil];
+
 }
 
 /* Aviary delegate method that is called when Aviary is done with an image. 
