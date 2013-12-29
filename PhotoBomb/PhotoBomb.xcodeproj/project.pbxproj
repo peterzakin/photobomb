@@ -24,10 +24,10 @@
 		1B164A21183C358A0042511E /* PhotoBombTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B164A20183C358A0042511E /* PhotoBombTests.m */; };
 		1B4585611842AFD800BBE4C9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585601842AFD800BBE4C9 /* CoreText.framework */; };
 		1B4585631842AFE000BBE4C9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4585621842AFE000BBE4C9 /* OpenGLES.framework */; };
+		1B7DC43A186F960C0084B8F3 /* PBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DC439186F960C0084B8F3 /* PBClient.m */; };
 		1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C930AD1618426E4B00B097AC /* libz.1.1.3.dylib */; };
 		1B9E6AFF1842E3FF00BB29C8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */; };
 		1B9E6B021844192B00BB29C8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E6B00184418D800BB29C8 /* MessageUI.framework */; };
-		1BC6899F186622BD0022487C /* libPods-Facebook-iOS-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC6899E186622BD0022487C /* libPods-Facebook-iOS-SDK.a */; };
 		1BE702DC1842AF73004CD1B5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */; };
 		1BE702DE1842AF7D004CD1B5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */; };
 		1BE702E01842AF86004CD1B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE702DF1842AF86004CD1B5 /* Accelerate.framework */; };
@@ -51,6 +51,7 @@
 		C9765C8A185E6CE000D7E49C /* peter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9765C89185E6CE000D7E49C /* peter.jpg */; };
 		C9FFF5131842B4B80053475A /* ParseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FFF5121842B4B80053475A /* ParseStore.m */; };
 		C9FFF5171842B8C90053475A /* PBImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FFF5161842B8C90053475A /* PBImage.m */; };
+		F37C0DDF491541CFA366CB84 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53778CFBBCA04F30810A2028 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,9 +85,10 @@
 		1B164A20183C358A0042511E /* PhotoBombTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBombTests.m; sourceTree = "<group>"; };
 		1B4585601842AFD800BBE4C9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1B4585621842AFE000BBE4C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1B7DC438186F960C0084B8F3 /* PBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBClient.h; sourceTree = "<group>"; };
+		1B7DC439186F960C0084B8F3 /* PBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBClient.m; sourceTree = "<group>"; };
 		1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1B9E6B00184418D800BB29C8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		1BC6899E186622BD0022487C /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		1BE702DB1842AF73004CD1B5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1BE702DD1842AF7D004CD1B5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		1BE702DF1842AF86004CD1B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 		1BFABD881842791D00D7BB03 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		1BFABD891842791D00D7BB03 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		1BFABD8A1842791E00D7BB03 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		53778CFBBCA04F30810A2028 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9953C72D10414EC7B3988CEE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C930AD1018426E2700B097AC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C930AD1218426E2F00B097AC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -132,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC6899F186622BD0022487C /* libPods-Facebook-iOS-SDK.a in Frameworks */,
 				1B9E6B021844192B00BB29C8 /* MessageUI.framework in Frameworks */,
 				1B9E6AEA1842B76600BB29C8 /* libz.1.1.3.dylib in Frameworks */,
 				1B4585631842AFE000BBE4C9 /* OpenGLES.framework in Frameworks */,
@@ -154,6 +156,7 @@
 				C930AD1118426E2700B097AC /* AudioToolbox.framework in Frameworks */,
 				1B1649FC183C35890042511E /* CoreData.framework in Frameworks */,
 				1B1649FA183C35890042511E /* UIKit.framework in Frameworks */,
+				F37C0DDF491541CFA366CB84 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +202,6 @@
 		1B1649F4183C35890042511E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BC6899E186622BD0022487C /* libPods-Facebook-iOS-SDK.a */,
 				1B9E6B00184418D800BB29C8 /* MessageUI.framework */,
 				1B9E6AFE1842E3FF00BB29C8 /* Parse.framework */,
 				1B4585621842AFE000BBE4C9 /* OpenGLES.framework */,
@@ -221,6 +223,7 @@
 				1B1649F9183C35890042511E /* UIKit.framework */,
 				1B1649FB183C35890042511E /* CoreData.framework */,
 				1B164A13183C358A0042511E /* XCTest.framework */,
+				53778CFBBCA04F30810A2028 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,6 +233,8 @@
 			children = (
 				1B164A06183C35890042511E /* PBAppDelegate.h */,
 				1B164A07183C358A0042511E /* PBAppDelegate.m */,
+				1B7DC438186F960C0084B8F3 /* PBClient.h */,
+				1B7DC439186F960C0084B8F3 /* PBClient.m */,
 				1B164A0C183C358A0042511E /* Images.xcassets */,
 				1B164A09183C358A0042511E /* PhotoBomb.xcdatamodeld */,
 				1B1649FE183C35890042511E /* Supporting Files */,
@@ -517,6 +522,7 @@
 				C9FFF5171842B8C90053475A /* PBImage.m in Sources */,
 				1B164A0B183C358A0042511E /* PhotoBomb.xcdatamodeld in Sources */,
 				1B164A08183C358A0042511E /* PBAppDelegate.m in Sources */,
+				1B7DC43A186F960C0084B8F3 /* PBClient.m in Sources */,
 				1B164A04183C35890042511E /* main.m in Sources */,
 				1BFABD7C18417E5000D7BB03 /* HomeViewController.m in Sources */,
 			);
