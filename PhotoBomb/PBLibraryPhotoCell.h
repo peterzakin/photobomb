@@ -11,7 +11,9 @@
 @interface PBLibraryPhotoCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIImageView *authorImagerrr;
 
-- (void)applyImage:(UIImage *)image;
+- (id)initWithImage:(UIImage *)image;
+- (void)applyAuthorPhoto:(UIImage *)photo username:(NSString *)username;
 
 @end

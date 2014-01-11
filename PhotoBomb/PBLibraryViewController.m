@@ -14,7 +14,7 @@
 
 @end
 
-NSInteger PHOTO_CELL_SIZE = 350;
+NSInteger PHOTO_CELL_SIZE = 380;
 
 
 @implementation PBLibraryViewController
@@ -34,6 +34,7 @@ NSInteger PHOTO_CELL_SIZE = 350;
         [self.photos addObject:photo];
     
     }
+    
     return self;
 }
 - (void)viewDidLoad
@@ -41,8 +42,12 @@ NSInteger PHOTO_CELL_SIZE = 350;
     [super viewDidLoad];
     UIView *profileCard = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
     
+    [profileCard setBackgroundColor:[UIColor redColor]];
+    
     
     [self.view addSubview:profileCard];
+    [self.view setBackgroundColor:[UIColor redColor]];
+    
     [self setupTableView];
     
 }
@@ -62,16 +67,16 @@ NSInteger PHOTO_CELL_SIZE = 350;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIImage *photo = [self.photos objectAtIndex:[indexPath row]];
+
     PBLibraryPhotoCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    UIImage *photo = [self.photos objectAtIndex:[indexPath row]];
-    
     if (!cell){
-        cell = [[PBLibraryPhotoCell alloc] init];
+        cell = [[PBLibraryPhotoCell alloc] initWithImage:photo];
     }
     
-    //method adds image to the cell's imageView.
-    [cell applyImage:photo];
+    [cell applyAuthorPhoto:photo username:@"pewter zakin"];
+//    cell.backgroundColor = [[UIColor alloc] initWithRed:240.0f/255.0f green:240.0f/255.0f blue:240.0f/255.0f alpha:1];
     
     return cell;
 }
@@ -84,9 +89,13 @@ NSInteger PHOTO_CELL_SIZE = 350;
 -(void)setupTableView
 {
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
+    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     [self.view addSubview:self.tableView];
+    
 }
 
 

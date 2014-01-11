@@ -39,8 +39,6 @@
         [self.loginButton setHidden:YES];
         self.lvc = [[PBLibraryViewController alloc] init];
         [self.view addSubview:self.lvc.view];
-      //  [self.lvc.tableView reloadData];
-    
     }
     else {
         [self.navigationController setNavigationBarHidden:YES];
