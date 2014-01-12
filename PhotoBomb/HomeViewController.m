@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "CameraViewController.h"
 #import <Parse/Parse.h>
+#import "PBClient.h"
 
 @interface HomeViewController ()
 
@@ -82,20 +83,31 @@
             } else {
                 NSLog(@"Uh oh. An error occurred: %@", error);
             }
-        } else if (user.isNew) {
-            NSLog(@"User with facebook signed up and logged in!");
-            
-            CameraViewController *cvc = [[CameraViewController alloc] init];
-
-            [[self navigationController] pushViewController:cvc animated:YES];
-            
-            
-            
         } else {
-            NSLog(@"User with facebook logged in!");
-            CameraViewController *cvc = [[CameraViewController alloc] init];
+            FBRequest *request = [FBRequest requestForMe];
             
-            [[self navigationController] pushViewController:cvc animated:YES];
+            [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                // handle response
+
+                PBClient *client = [PBClient sharedClient];
+                NSString *fullName = result[@"name"];
+                [client setUserFullName:fullName];
+            }];
+            
+            
+            if (user.isNew) {
+                NSLog(@"User with facebook signed up and logged in!");
+                
+                CameraViewController *cvc = [[CameraViewController alloc] init];
+
+                [[self navigationController] pushViewController:cvc animated:YES];
+            
+            } else {
+                NSLog(@"User with facebook logged in!");
+                CameraViewController *cvc = [[CameraViewController alloc] init];
+            
+                [[self navigationController] pushViewController:cvc animated:YES];
+            }
         }
     }];
 }

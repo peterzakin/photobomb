@@ -9,6 +9,7 @@
 #import "ShareViewController.h"
 #import "CameraViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "PBClient.h"
 
 @interface ShareViewController ()
 
@@ -32,6 +33,7 @@
     // Do any additional setup after loading the view from its nib.
     [self.shareButton addTarget:self action:@selector(shareButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.imageView setImage:self.image];
+    PBClient *client = [PBClient sharedClient];
     /*
      [self.shareButton setFrame:CGRectMake(0, self.view.bounds.size.height - self.shareButton.bounds.size.height, self.shareButton.bounds.size.width, self.shareButton.bounds.size.width)];
      */
